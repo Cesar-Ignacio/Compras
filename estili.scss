@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0px;
     padding: 0px;
@@ -56,6 +58,11 @@ body{
      }
  }
 
+}
+
+@mixin redes ($fondo,$color){
+    background-color: $fondo;
+    color:$color;
 }
 
 .main{
@@ -157,6 +164,82 @@ body{
         }
 
     }
+
+    .Redes{
+        
+      
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        
+        .red{
+            display: flex;
+            padding: 8px;
+            margin: 5px;
+            border-radius: 8px;
+            a{
+                text-decoration: none;
+                color: white;
+                margin: 0px;
+                padding: 0px;
+            }
+            span{
+                box-shadow: 5px 5px 0px rgba(49, 45, 51, 0.308);
+                border-radius: 3px;
+                
+            }
+            transition: linear 500ms;
+        }
+        .red.p1{
+         @include redes(rgb(199, 94, 94),white)
+        }
+        .red.s2{
+            @include redes(rgb(74, 74, 197),white)
+        }
+        .red.t3{
+            @include redes(rgb(72, 206, 72), white); 
+        }
+        .red.c4{
+            @include redes(rgb(10, 151, 151),white )
+        }
+        .red.f5{
+            @include redes(rgb(167, 42, 42),white)
+        }
+        .red.e6{
+            @include redes(rgb(167, 167, 84),white )
+        } 
+
+    }
+
+    .red:hover{
+        box-shadow: 0px 0px 0px 10px  rgba(42, 38, 44, 0.308);
+        transition: linear 500ms;
+    }
  
 }
 
+.footer{
+    background-color: #5D6D7E;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .parrafo{
+       
+        margin: 5px;
+        padding: 5px;
+        width: 20%;
+
+        h5{
+            font-family:verdana;
+            color:white;
+        }
+        ul{
+           list-style: none;
+           color:#B2BABB;
+           padding: 0px;
+        }
+        
+    }
+}
